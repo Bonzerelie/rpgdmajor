@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,6 @@
 </head>
 <body>
   <div class="container">
-
-    <!-- Start Screen -->
     <div id="start-screen">
       <div class="start-content">
         <h1>The Relative Pitch Game! 🎹🎶</h1>
@@ -26,20 +25,19 @@
       </div>
     </div>
 
-    <!-- Game Screen -->
     <div id="game-screen" class="hidden">
       <h1>The Relative Pitch Game! 🎹🎶</h1>
       <h2 id="scale-label">Diatonic notes of the D Major Scale (Ionian Mode)</h2>
-      <p id="octave-label">One Octave (Notes C4–C5)</p>
+      <p id="octave-label">One Octave (Notes D4–D5)</p>
 
       <div class="controls">
         <button id="play-reference" class="green-button">Play Reference (D - Tonic)</button>
+        <button id="play-scale" class="green-button">Play Reference, Scale</button>
         <button id="replay-note" class="green-button">Replay Note</button>
         <button id="next-button" class="green-button" disabled>Next</button>
       </div>
 
       <p id="prompt">Which note was played?</p>
-
       <div id="note-buttons-container"></div>
 
       <div class="toggle-display">
@@ -50,12 +48,12 @@
 
       <div class="bottom-buttons">
         <div class="mode-adjust-buttons">
-  <p>Adjust note range:</p>
-  <div class="adjust-buttons-row">
-    <button id="remove-note" class="green-button">➖</button>
-    <button id="add-note" class="green-button">➕</button>
-  </div>
-</div>
+          <p>Adjust note range:</p>
+          <div class="adjust-buttons-row">
+            <button id="remove-note" class="green-button">➖</button>
+            <button id="add-note" class="green-button">➕</button>
+          </div>
+        </div>
         <button id="back-button" class="green-button back-button">← Back</button>
         <button id="reset-score" class="green-button">Reset Score</button>
       </div>
