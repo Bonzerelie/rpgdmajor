@@ -74,9 +74,18 @@ function updateNoteButtonLabels() {
   const buttons = noteButtonsContainer.querySelectorAll('.blue-button');
   buttons.forEach(btn => {
     const note = btn.getAttribute('data-note');
-    btn.textContent = showDegrees ? degreeMap[note] : note;
+    if (showDegrees) {
+      if (currentMode === 8 && note === 'D') {
+        btn.textContent = '1st/8th';
+      } else {
+        btn.textContent = degreeMap[note];
+      }
+    } else {
+      btn.textContent = note;
+    }
   });
 }
+
 
 function buildNoteButtons() {
   noteButtonsContainer.innerHTML = '';
