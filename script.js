@@ -83,6 +83,14 @@ function updateNoteButtonLabels() {
     } else {
       btn.textContent = note;
     }
+    if (currentMode === 8 && note === 'D' && showDegrees) {
+  btn.textContent = '1st/8th';
+  btn.classList.add('wide-label');
+} else {
+  btn.textContent = showDegrees ? degreeMap[note] : note;
+  btn.classList.remove('wide-label');
+}
+
   });
 }
 
