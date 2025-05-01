@@ -1,3 +1,4 @@
+
 body {
   font-family: sans-serif;
   background-color: white;
@@ -86,6 +87,10 @@ body {
   box-sizing: border-box;
 }
 
+.wide-label {
+  min-width: 60px;
+}
+
 #reset-score {
   margin-top: 10px;
 }
@@ -127,27 +132,6 @@ body {
   gap: 0px;
   margin-top: 10px;
   margin-bottom: 20px;
-}
-
-.mode-adjust-buttons {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.mode-button {
-  margin-bottom: 10px;
-}
-
-#remove-note, #add-note {
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  font-size: 14px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .mode-adjust-buttons {
