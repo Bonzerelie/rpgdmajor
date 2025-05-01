@@ -50,11 +50,19 @@ let currentNotes = [];
 const dMajorNoteOrder = ['D', 'E', 'F#', 'G', 'A', 'B', 'C#'];
 
 function getNoteName(filename) {
-  for (const [name, files] of Object.entries(noteMap)) {
-    if (files.includes(filename)) return name;
-  }
-  return '';
+  const mapping = {
+    'd4': 'D',
+    'd5': 'D',
+    'e4': 'E',
+    'f#4': 'F#',
+    'g4': 'G',
+    'a4': 'A',
+    'b4': 'B',
+    'c#5': 'C#'
+  };
+  return mapping[filename] || '';
 }
+
 
 function playNote(noteFile) {
   audio.src = `audio/${noteFile}.mp3`;
