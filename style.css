@@ -162,3 +162,7 @@ body {
   display: flex;
   gap: 10px;
 }
+
+.wide-label {
+  min-width: 60px; /* adjust as needed */
+}
