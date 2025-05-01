@@ -1,4 +1,3 @@
-
 const startScreen = document.getElementById('start-screen');
 const gameScreen = document.getElementById('game-screen');
 const noteButtonsContainer = document.getElementById('note-buttons-container');
@@ -21,13 +20,13 @@ const addNoteBtn = document.getElementById('add-note');
 const removeNoteBtn = document.getElementById('remove-note');
 
 const noteMap = {
-  'D': ['d4', 'd5'],
-  'E': ['e4'],
-  'F#': ['f#4'],
-  'G': ['g4'],
-  'A': ['a4'],
-  'B': ['b4'],
-  'C#': ['c#5']
+  'D': ['d3', 'd4'],
+  'E': ['e3'],
+  'F#': ['f#3'],
+  'G': ['g3'],
+  'A': ['a3'],
+  'B': ['b3'],
+  'C#': ['c#4']
 };
 
 const degreeMap = {
@@ -53,14 +52,14 @@ let currentNotes = [];
 
 function getNoteName(filename) {
   const mapping = {
+    'd3': 'D',
     'd4': 'D',
-    'd5': 'D',
-    'e4': 'E',
-    'f#4': 'F#',
-    'g4': 'G',
-    'a4': 'A',
-    'b4': 'B',
-    'c#5': 'C#'
+    'e3': 'E',
+    'f#3': 'F#',
+    'g3': 'G',
+    'a3': 'A',
+    'b3': 'B',
+    'c#4': 'C#'
   };
   return mapping[filename] || '';
 }
@@ -121,7 +120,7 @@ function loadNewNote() {
     btn.classList.remove('correct', 'incorrect');
   });
   const candidates = [...currentNotes];
-  if (currentMode === 8) candidates.push('d5');
+  if (currentMode === 8) candidates.push('d4');
   currentNote = candidates[Math.floor(Math.random() * candidates.length)];
   playNote(currentNote);
   promptText.textContent = 'Which note was played?';
@@ -187,11 +186,11 @@ function toggleDisplay(mode) {
     5: 'Notes D, E, F#, G and A from one octave',
     6: 'Notes D, E, F#, G, A and B from one octave',
     7: 'Notes D, E, F#, G, A, B and C# from one octave',
-    8: 'One Octave (Notes D4 to D5) - the D button works for D4&D5!'
+    8: 'One Octave (Notes D3 to D4) - the D button works for D3&D4!'
   };
 
   octaveLabel.textContent = noteTextOptions[currentMode];
-  playRefBtn.textContent = showDegrees ? 'Play Reference, D (Tonic)' : 'Play Reference, D (Tonic)';
+  playRefBtn.textContent = 'Play Reference, D (Tonic)';
   promptText.textContent = 'Which note was played?';
 }
 
@@ -211,7 +210,7 @@ backButton.addEventListener('click', () => {
   startScreen.classList.remove('hidden');
 });
 
-playRefBtn.addEventListener('click', () => playNote('d4'));
+playRefBtn.addEventListener('click', () => playNote('d3'));
 playScaleBtn.addEventListener('click', () => playNote('dmajorscale'));
 replayNoteBtn.addEventListener('click', () => playNote(currentNote));
 nextBtn.addEventListener('click', loadNewNote);
