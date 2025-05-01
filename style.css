@@ -91,6 +91,17 @@ body {
   min-width: 60px;
 }
 
+#remove-note, #add-note {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #reset-score {
   margin-top: 10px;
 }
