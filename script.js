@@ -19,14 +19,15 @@ const addNoteBtn = document.getElementById('add-note');
 const removeNoteBtn = document.getElementById('remove-note');
 
 const noteMap = {
-  'C#': ['c#5'], 'C': ['d4', 'd5'],
-  'D': ['e4'],
-  'E': ['f#4'],
-  'F#': ['g4'],
-  'G': ['a4'],
-  'A': ['b4'],
-  'B': ['c#5']
+  'D': ['d4', 'd5'],
+  'E': ['e4'],
+  'F#': ['f#4'],
+  'G': ['g4'],
+  'A': ['a4'],
+  'B': ['b4'],
+  'C#': ['c#5']
 };
+
 
 const degreeMap = {
   'D': '1st',
