@@ -157,3 +157,8 @@ body {
   display: flex;
   gap: 10px;
 }
+
+.mode-button {
+  margin: 6px 0; /* Adds vertical spacing between mode buttons */
+}
+
