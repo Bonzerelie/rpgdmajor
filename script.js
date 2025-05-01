@@ -66,7 +66,7 @@ function getNoteName(filename) {
 
 
 function playNote(noteFile) {
-  audio.src = `audio/${noteFile}.mp3`;
+  audio.src = `audio/${encodeURIComponent(noteFile)}.mp3`;
   audio.play();
 }
 
