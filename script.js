@@ -47,6 +47,8 @@ let showDegrees = false;
 let currentMode = 8;
 let currentNotes = [];
 
+const dMajorNoteOrder = ['D', 'E', 'F#', 'G', 'A', 'B', 'C#'];
+
 function getNoteName(filename) {
   for (const [name, files] of Object.entries(noteMap)) {
     if (files.includes(filename)) return name;
@@ -69,7 +71,7 @@ function updateNoteButtonLabels() {
 
 function buildNoteButtons() {
   noteButtonsContainer.innerHTML = '';
-  const keys = Object.keys(noteMap).slice(0, currentMode);
+  const keys = dMajorNoteOrder.slice(0, currentMode);
   currentNotes = keys.map(key => noteMap[key][0]);
 
   keys.forEach(note => {
